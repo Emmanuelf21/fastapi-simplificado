@@ -13,12 +13,6 @@ def exibir_produtos():
     data = json.loads(dadosProd.read())
     return data
 
-@app.get("/carrinho")
-def exibir_carrinho():
-    dadosCar = open(pathCar)
-    data = json.loads(dadosCar.read())
-    return data
-
 @app.post("/products")
 def novo_produto(product: Product):
     dadosProd = open(pathProd)
